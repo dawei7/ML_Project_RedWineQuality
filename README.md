@@ -83,7 +83,7 @@ The docker image is stored on my DockerHub account and is the same as the one us
 See here the screenshot of the deployment:
 ![Azure App Services Deployment](Azure_AppServices_Deployment.png)
 
-## Predidction Screenshots
+## Prediction Screenshots
 ![deployment_1_parameter.png](deployment_1_parameter.png)
 ![deployment_1_excellent_result.png](deployment_1_excellent_result.png)
 ![deployment_2_parameter.png](deployment_2_parameter.png)
