@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction Results</title>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="center-align">Prediction Results</h2>
+        <h3 class="center-align">Prediction Result: {{ result }}</h3>
+        <h5 class="center-align">Probability of being Excellent: {{ excellent_prob }}</h5>
+        <h5 class="center-align">Probability of being Not Excellent: {{ not_excellent_prob }}</h5>
+        <div class="row center-align">
+            <a href="/" class="waves-effect waves-light btn">Back to Prediction Form</a>
+        </div>
+    </div>
+
+    <!-- Initialize Materialize components -->
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+</html>

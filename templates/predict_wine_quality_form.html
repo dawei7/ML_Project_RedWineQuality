@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="center-align">Wine Quality Prediction Form</h2>
+        <div class="row">
+            <form action="/predict" method="post" class="col s12">
+                <!-- Fixed Acidity -->
+                <div class="input-field col s12">
+                    <input id="fixed_acidity" type="text" name="fixed_acidity" class="validate">
+                    <label for="fixed_acidity">Fixed Acidity</label>
+                </div>
+
+                <!-- Volatile Acidity -->
+                <div class="input-field col s12">
+                    <input id="volatile_acidity" type="text" name="volatile_acidity" class="validate">
+                    <label for="volatile_acidity">Volatile Acidity</label>
+                </div>
+
+                <!-- Citric Acid -->
+                <div class="input-field col s12">
+                    <input id="citric_acid" type="text" name="citric_acid" class="validate">
+                    <label for="citric_acid">Citric Acid</label>
+                </div>
+
+                <!-- Residual Sugar -->
+                <div class="input-field col s12">
+                    <input id="residual_sugar" type="text" name="residual_sugar" class="validate">
+                    <label for="residual_sugar">Residual Sugar</label>
+                </div>
+
+                <!-- Chlorides -->
+                <div class="input-field col s12">
+                    <input id="chlorides" type="text" name="chlorides" class="validate">
+                    <label for="chlorides">Chlorides</label>
+                </div>
+
+                <!-- Free Sulfur Dioxide -->
+                <div class="input-field col s12">
+                    <input id="free_sulfur_dioxide" type="text" name="free_sulfur_dioxide" class="validate">
+                    <label for="free_sulfur_dioxide">Free Sulfur Dioxide</label>
+                </div>
+
+                <!-- Total Sulfur Dioxide -->
+                <div class="input-field col s12">
+                    <input id="total_sulfur_dioxide" type="text" name="total_sulfur_dioxide" class="validate">
+                    <label for="total_sulfur_dioxide">Total Sulfur Dioxide</label>
+                </div>
+
+                <!-- Density -->
+                <div class="input-field col s12">
+                    <input id="density" type="text" name="density" class="validate">
+                    <label for="density">Density</label>
+                </div>
+
+                <!-- pH -->
+                <div class="input-field col s12">
+                    <input id="pH" type="text" name="pH" class="validate">
+                    <label for="pH">pH</label>
+                </div>
+
+                <!-- Sulphates -->
+                <div class="input-field col s12">
+                    <input id="sulphates" type="text" name="sulphates" class="validate">
+                    <label for="sulphates">Sulphates</label>
+                </div>
+
+                <!-- Alcohol -->
+                <div class="input-field col s12">
+                    <input id="alcohol" type="text" name="alcohol" class="validate">
+                    <label for="alcohol">Alcohol</label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Predict
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        {% if result %}
+            <h6 class="center-align">Quality 3-6: Not Excellent, Quality: 7-8: Excellent </h6>
+            <h3 class="center-align">Prediction Result: {{ result }}</h3>
+            <h5 class="center-align">Probability of being Excellent: {{ excellent_prob }}</h5>
+            <h5 class="center-align">Probability of being Not Excellent: {{ not_excellent_prob }}</h5>
+        {% endif %}
+    </div>
+
+    <!-- Initialize Materialize components -->
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+</html>
