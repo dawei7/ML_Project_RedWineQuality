@@ -8,7 +8,8 @@
 - [Usage](#usage)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
-- [Improvements](#improvements)
+- [Deployment on Azure WebServiceApp](#deployment-on-azure-webserviceapp)
+- [Prediction Screenshots](#prediction-screenshots)
 - [License](#license)
 
 ## Overview
